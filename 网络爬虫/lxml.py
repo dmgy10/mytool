@@ -1,5 +1,5 @@
 import requests
-from lxml import etree
+from 网络爬虫.lxml import etree
 import urllib
 
 """
@@ -37,8 +37,7 @@ html.xpath('//li')
 爬取新浪新闻呢
 """
 import requests
-from lxml import etree
-import urllib
+from 网络爬虫.lxml import etree
 from bs4 import BeautifulSoup
 
 url = 'https://news.sina.com.cn/'
@@ -46,9 +45,6 @@ res = requests.get(url)
 
 soup = BeautifulSoup(res.content)
 html = etree.HTML(res.content)
-
-
-import numpy as np
 
 from sklearn.metrics.pairwise import cosine_similarity
 cosine_similarity([1, 0, 0, 0], [1, 0, 0, 0])

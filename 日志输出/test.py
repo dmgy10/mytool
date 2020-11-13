@@ -5,8 +5,7 @@ Created on Tue Sep 17 10:04:39 2019
 @author: yuyh2
 """
 
-
-import dbtool
+from 其他 import dbtool
 import log
 import time
 
