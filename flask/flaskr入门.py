@@ -1,4 +1,6 @@
 from flask import Flask, url_for, redirect, request
+
+
 app = Flask(__name__)
 
 @app.route('/')
