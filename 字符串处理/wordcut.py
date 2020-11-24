@@ -26,13 +26,14 @@ class Wordcut:
     :param: platten:是否将列表铺平
     """
     @staticmethod
-    def word_cut(word, flatten = False):
+    def word_cut(word, flatten = False):  # 只有字符串形式才可以分词
         if isinstance(word, str):
             return jieba.lcut(word)
         else:
             word_list = []
             for i in word:
-                word_list.append(jieba.lcut(i))
+                if isinstance(i, str):
+                    word_list.append(jieba.lcut(i))
             if flatten:
                 word_list = Wordcut.flatten_list(word_list)
             return word_list
